@@ -68,8 +68,8 @@ function UsersDAO(db) {
         // TODO: hw2.3
         var query = {"_id" : username};
         db.collection("users").findOne(query, function (err, doc) {
-            console.log(err + " " + doc["_id"]);
-            callback(err, doc);
+            
+            validateUserDoc(err, doc);
         });
     }
 }
